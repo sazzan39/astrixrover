@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astrix Rover - Project Timeline</title>
+    <link rel="stylesheet" href="../styles/shared/header.css" />
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom, #0f0f2b, #1e1e3f);
+        color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .timeline-container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 5rem auto;
+        position: relative;
+      }
+
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: #ff9800;
+      }
+
+      .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 2rem;
+        box-sizing: border-box;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-content {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: -12px;
+        width: 20px;
+        height: 20px;
+        background: #ff9800;
+        border-radius: 50%;
+        border: 4px solid #1e1e3f;
+      }
+
+      .timeline-item:nth-child(even) .timeline-content::after {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -12px;
+        width: 20px;
+        height: 20px;
+        background: #ff9800;
+        border-radius: 50%;
+        border: 4px solid #1e1e3f;
+      }
+
+      .timeline-title {
+        font-size: 1.4rem;
+        color: #ff9800;
+        margin-bottom: 0.3rem;
+      }
+
+      .timeline-date {
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-bottom: 1rem;
+      }
+
+      .timeline-desc {
+        font-size: 1rem;
+        color: #ddd;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .timeline-line {
+          left: 20px;
+        }
+
+        .timeline-item,
+        .timeline-item:nth-child(even),
+        .timeline-item:nth-child(odd) {
+          left: 0;
+          width: 100%;
+          text-align: left;
+        }
+
+        .timeline-item .timeline-content::after {
+          left: -12px !important;
+          right: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="left-nav">
+        <img src="../assets/logo.jpg" class="logo" alt="Astrix Logo" />
+      </a>
+      <div class="right-nav" id="js-right-nav">
+        <img
+          src="../assets/icons/menu.png"
+          class="menu-icon"
+          id="js-menu-icon"
+          alt="Menu Icon"
+        />
+        <div class="menu-list" id="js-menu-list">
+          <div class="menu-item-div">
+            <a href="../index.html" class="menu-item-text">Home</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="about_us.html" class="menu-item-text">About Us</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="the_rover.html" class="menu-item-text">Rover</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="team.html" class="menu-item-text">Team</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="timeline.html" class="menu-item-text">Timeline</a>
+          </div>
+          <div class="menu-item-div">
+            <a href="support_us.html" class="menu-item-text">Support Us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="timeline-container">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">📌 Planning</h3>
+          <p class="timeline-date">March 10 – March 23, 2025</p>
+          <p class="timeline-desc">
+            Defined objectives, scoped deliverables, and built our initial concept for the Astrix Rover.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">🔧 Prototype & AI Initiation</h3>
+          <p class="timeline-date">March 24 – April 13, 2025</p>
+          <p class="timeline-desc">
+            Created early rover frame and began integrating object detection using YOLO and motion control systems.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">📝 System Design Draft</h3>
+          <p class="timeline-date">April 14 – April 20, 2025</p>
+          <p class="timeline-desc">
+            Defined architecture for automation, electronics, SLAM, and arm control. Created procurement plans.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">🧪 Simulations & Tests</h3>
+          <p class="timeline-date">April 28 – May 4, 2025</p>
+          <p class="timeline-desc">
+            Ran kinematic models, PID tuning simulations, and tested real-time object avoidance scenarios.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">💡 Research & Learning</h3>
+          <p class="timeline-date">June – July 2025</p>
+          <p class="timeline-desc">
+            Trained models, evaluated SLAM libraries (RTAB-Map, ORB-SLAM2), and upgraded navigation stack.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">🛒 Equipment Purchase</h3>
+          <p class="timeline-date">August 1 – August 15, 2025</p>
+          <p class="timeline-desc">
+            Procured motors, arm actuators, LiDAR, and embedded systems for final build.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">⚙️ Full Assembly</h3>
+          <p class="timeline-date">September 2025</p>
+          <p class="timeline-desc">
+            Integrated all mechanical parts, electronics, and sensors into the chassis with ROS setup.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">🔄 Testing & Iteration</h3>
+          <p class="timeline-date">October – November 2025</p>
+          <p class="timeline-desc">
+            Conducted SLAM mapping, real-time control, arm testing, and improved localization algorithms.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3 class="timeline-title">✅ Final Optimization</h3>
+          <p class="timeline-date">December 2025</p>
+          <p class="timeline-desc">
+            Final polishing, UI additions, field testing, and packaging Astrix Rover for competition.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script type="module" src="../scripts/shared/heading.js"></script>
+  </body>
+</html>

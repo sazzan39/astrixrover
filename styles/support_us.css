@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Base Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #f0f0f0;
+  background: linear-gradient(to bottom, #0f0f2b, #1e1e3f);
+  background-attachment: fixed;
+}
+
+.body {
+  background: url("../assets/space_bg.jpg") center center / cover no-repeat;
+  background-attachment: fixed;
+  color: #f0f0f0;
+}
+
+/* Section Layout */
+.support-section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Headings */
+.support-section h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.support-text {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* Layout */
+.support-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* QR Code Section */
+.qr-container {
+  text-align: center;
+  animation: slideUp 1s ease forwards;
+}
+
+.qr-img {
+  width: 280px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(255, 152, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.qr-img:hover {
+  transform: scale(1.05);
+}
+
+.qr-caption {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+/* Sponsor Info */
+.sponsor-info {
+  animation: slideUp 1s ease 0.3s forwards;
+}
+
+.sponsor-info h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #ff9800;
+  margin-bottom: 1rem;
+}
+
+.sponsor-info p {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sponsor-info a {
+  color: #ff9800;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.sponsor-info a:hover {
+  color: #ffa726;
+}
+
+/* Google Form */
+.google-form-section {
+  margin-top: 4rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.google-form-section h2 {
+  font-size: 1.9rem;
+  color: #ff9800;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  animation: slideUp 1s ease 0.5s forwards;
+}
+
+/* CTA Button (optional) */
+.support-button {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.support-button:hover {
+  background: linear-gradient(135deg, #e64a19, #ff6f00);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  visibility: hidden;
+}
+
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}

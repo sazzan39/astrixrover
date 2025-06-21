@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Base */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color: #f0f0f0;
+  background: linear-gradient(to bottom, #0f0f2b 0%, #1e1e3f 100%);
+  background-attachment: fixed;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  background: url("../assets/space_bg.jpg") center center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* Layout */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Styles */
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section-text {
+  max-width: 50rem;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.section-button {
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.section-button:hover {
+  background: linear-gradient(135deg, #e64a19, #ff6f00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, transparent 100%);
+  backdrop-filter: blur(4px);
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/rover_on_mars.png");
+  background-size: cover;
+  z-index: -1;
+  mask-image: url("../assets/ink.gif");
+  mask-size: cover;
+  mask-position: center;
+}
+
+.intro-heading {
+  font-size: 4rem;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.intro-heading2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffc107;
+  font-weight: 500;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.intro-button {
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.intro-button:hover {
+  background: linear-gradient(135deg, #e64a19, #ff6f00);
+  transform: translateY(-2px);
+}
+
+/* Slider */
+.slider {
+  background-color: #1a1a2e;
+  padding: 1.5rem 0;
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+
+.slider .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: var(--width);
+  height: var(--height);
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 0.5rem;
+  position: absolute;
+  left: 100%;
+  animation: autoRun 10s linear infinite;
+  animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slider .item img {
+  width: 40%;
+}
+
+.slider .item .item-text {
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+
+/* About Us */
+.about-us {
+  background-color: white;
+  color: black;
+  padding: 4rem 3rem;
+  border-top: 2px solid #ef480e;
+}
+
+.aboutus-button {
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.aboutus-button:hover {
+  background: linear-gradient(135deg, #e64a19, #ff6f00);
+  transform: translateY(-2px);
+}
+
+/* Rover Section */
+.rover-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.rover-text {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.rover-astrix-rover-text {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  color: #82b1ff;
+}
+
+.rover-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  animation: floatRover 6s ease-in-out infinite;
+  margin: 2rem 0;
+}
+
+@keyframes floatRover {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Team Section */
+.team {
+  background-color: #ffffff;
+  color: #111;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.team-card-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.team-card-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.team-card-role {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Timeline Section */
+.timeline-section {
+  color: white;
+  background: #12122e;
+  padding: 4rem 1rem;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.timeline-section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timeline-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #82b1ff;
+  padding: 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.timeline-item:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #82b1ff;
+}
+
+.timeline-content .date {
+  font-size: 0.9rem;
+  color: #ccc;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.timeline-img {
+  margin-top: 1rem;
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
